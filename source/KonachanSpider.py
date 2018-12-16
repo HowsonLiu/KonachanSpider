@@ -50,7 +50,7 @@ def LoadIni():
 def CheckUrl(target_url):
     if not target_url or target_url == '':
         return False
-    if re.compile(r'^(http://|https://)?konachan\.com/post/show/\d+').search(target_url) is None:
+    if re.compile(r'^(http://|https://)?konachan\.(com|net)/post/show/\d+').search(target_url) is None:
         return False
     return True
 
@@ -111,7 +111,9 @@ def Crawl(img_main_url):
     return 0
 
 LoadIni()
-print('请复制如 http://konachan.com/post/show/275349/2girls-bikini-black_hair-blonde_hair-blush-boots-b 网页吧')
+print('请复制如下网页吧')
+print('R18(com): https://konachan.com/post/show/275374/all_male-aqua_eyes-blonde_hair-borr-close-go_robot')
+print('Normal(net): https://konachan.net/post/show/275374/all_male-aqua_eyes-blonde_hair-borr-close-go_robot')
 while True:
     print('按enter开始, 按f结束')
     if input() == 'f':
