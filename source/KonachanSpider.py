@@ -29,7 +29,7 @@ headers = {
 
 def CreateDefaultIni():
     global ini_path, save_path
-    ini_file = open(ini_path, 'w', encoding='utf-8')
+    ini_file = open(ini_path, 'w')
     ini_file.write(default_ini.format(save_path=save_path))
     ini_file.close()
     if not os.path.exists(save_path):
@@ -39,7 +39,7 @@ def LoadIni():
     global save_path, ini_path
     if os.path.exists(ini_path):
         cfg = configparser.ConfigParser()
-        cfg.read(ini_path, encoding='utf-8')
+        cfg.read(ini_path)
         if not os.path.exists(cfg['setting']['save_path']):
             CreateDefaultIni()
         else:
