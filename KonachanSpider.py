@@ -111,6 +111,7 @@ def Crawl(img_main_url):
     return 0
 
 LoadIni()
+print('请复制如 http://konachan.com/post/show/275349/2girls-bikini-black_hair-blonde_hair-blush-boots-b 网页吧')
 while True:
     print('按enter开始, 按f结束')
     if input() == 'f':
